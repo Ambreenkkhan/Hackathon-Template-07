@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import Hero from "./Components/hero";
 import Card from "./Components/Card";
+import Hero from "./Components/Hero";
 
 export default function Home() {
   const carData = [
@@ -43,15 +43,66 @@ export default function Home() {
     },
     {
       id: 4,
-      title: "ALL NEW RUSH",
-      type: "SUV",
-      fuel: "55L",
-      transmission: "Manual",
-      image: "/Rush.png",
-      seats: 5,
-      price: "$350/day",
+      title: "Nissan GT-R",
+      type: "Sports Car",
+      fuel: "60L",
+      transmission: "Automatic",
+      image: "/gtr.png",
+      seats: 2,
+      price: "$1200/day",
       description:
-        "The All-New Rush is a versatile SUV designed for families and adventurers alike. \nReliable, spacious, and built to handle any terrain. \nIts rugged design ensures you're ready for the road less traveled. \nWhether you're on a family road trip or off-roading, it’s the perfect choice. \nComfortable seating and ample cargo space make it a family favorite. \nEnjoy modern features that elevate your driving experience. \nThis SUV combines practicality with a bold, sporty look. \nThe Rush is ready for any adventure, no matter the destination.",
+        "The Nissan GT-R is a masterpiece of engineering, delivering jaw-dropping acceleration. \nWith precision handling, it's an icon among car enthusiasts. \nIts twin-turbocharged engine ensures exceptional speed and power. \nThe GT-R offers an unforgettably thrilling driving experience. \nA perfect blend of aggressive styling and technical excellence. \nOn the track or on the road, the GT-R dominates. \nEvery ride is a testament to Nissan's commitment to performance. \nExperience the legacy of one of the world’s most legendary sports cars.",
+    },
+  ];
+
+  const carData1 = [
+    {
+      id: 1,
+      title: "All New Rush",
+      type: "Sports Car",
+      fuel: "50L",
+      transmission: "Manual",
+      image: "/koijesing.png",
+      seats: 2,
+      price: "$1500/day",
+      description:
+        "The Koenigsegg is a high-performance sports car, known for its incredible speed and cutting-edge design. \nPerfect for thrill-seekers who crave an adrenaline rush. \nWith its aerodynamic features and aggressive stance, it dominates the road. \nEngineered to break records, this car delivers heart-pounding acceleration. \nEvery detail has been designed for precision handling and speed. \nThe interior offers luxury, designed for the ultimate driving experience. \nEnjoy the thrill of driving a true masterpiece. \nKoenigsegg is not just a car; it's an experience.",
+    },
+    {
+      id: 2,
+      title: "Nissan GT-R",
+      type: "Sports Car",
+      fuel: "60L",
+      transmission: "Automatic",
+      image: "/gtr.png",
+      seats: 2,
+      price: "$1200/day",
+      description:
+        "The Nissan GT-R is a masterpiece of engineering, delivering jaw-dropping acceleration. \nWith precision handling, it's an icon among car enthusiasts. \nIts twin-turbocharged engine ensures exceptional speed and power. \nThe GT-R offers an unforgettably thrilling driving experience. \nA perfect blend of aggressive styling and technical excellence. \nOn the track or on the road, the GT-R dominates. \nEvery ride is a testament to Nissan's commitment to performance. \nExperience the legacy of one of the world’s most legendary sports cars.",
+    },
+    {
+      id: 3,
+      title: "ROLLS ROYCE",
+      type: "Luxury Car",
+      fuel: "80L",
+      transmission: "Automatic",
+      image: "/Rolls-Royce.png",
+      seats: 4,
+      price: "$5000/day",
+      description:
+        "Experience unparalleled luxury with the Rolls Royce, featuring exquisite craftsmanship. \nIts elegant design speaks volumes about sophistication and class. \nWith advanced technology, every journey is made smooth and luxurious. \nStep inside and feel the epitome of comfort and style. \nThe smooth, quiet ride makes it the perfect car for any occasion. \nIdeal for those who appreciate beauty and power in perfect harmony. \nEvery detail, from the upholstery to the features, is refined. \nRolls Royce offers a driving experience beyond compare.",
+    },
+    {
+      id: 4,
+      title: "Nissan GT-R",
+      type: "Sports Car",
+      fuel: "60L",
+      transmission: "Automatic",
+      image: "/gtr.png",
+      seats: 2,
+      price: "$1200/day",
+      description:
+        "The Nissan GT-R is a masterpiece of engineering, delivering jaw-dropping acceleration. \nWith precision handling, it's an icon among car enthusiasts. \nIts twin-turbocharged engine ensures exceptional speed and power. \nThe GT-R offers an unforgettably thrilling driving experience. \nA perfect blend of aggressive styling and technical excellence. \nOn the track or on the road, the GT-R dominates. \nEvery ride is a testament to Nissan's commitment to performance. \nExperience the legacy of one of the world’s most legendary sports cars.",
     },
     {
       id: 5,
@@ -104,14 +155,16 @@ export default function Home() {
   ];
 
   return (
-    <div className="Frame">
+    <div className="Frame bg-[#f6f7f9]">
       {/* Hero Section */}
       <Hero />
 
       {/* Popular Cars Section */}
-      <div>
-        <h1 className="text-2xl font-bold my-4">Popular Cars</h1>
-        <div className="grid grid-cols-4 gap-4">
+      <div className="">
+        <div className="flex ml-[80px] w-[250px] justify-start">
+          <h1 className="text-xl text-gray-400 my-4  ">Popular Car</h1>
+        </div>
+        <div className="grid grid-cols-4 ml-[28px] gap-4">
           {carData.map((car) => (
             <Card
               key={car.id}
@@ -129,10 +182,12 @@ export default function Home() {
       </div>
 
       {/* Recommended Cars Section */}
-      <div>
-        <h1 className="text-2xl font-bold my-4">Recommended Cars</h1>
-        <div className="grid grid-cols-4 gap-4">
-          {carData.map((car) => (
+      <div className="">
+        <div className="flex ml-[80px] w-[250px] justify-start">
+          <h1 className="text-xl text-gray-400  my-4">Recommended Cars</h1>
+        </div>
+        <div className="grid grid-cols-4  ml-[28px] gap-4">
+          {carData1.map((car) => (
             <Card
               key={car.id}
               title={car.title}
@@ -151,7 +206,7 @@ export default function Home() {
       <div className="flex justify-center mt-[30px]">
         <Link href="/ShowMore">
           <button className="bg-blue-600 w-[156px] h-[44px] mt-[50px] text-white border rounded-md">
-            View More Cars
+            Show More Cars
           </button>
         </Link>
       </div>

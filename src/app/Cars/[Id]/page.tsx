@@ -1,11 +1,9 @@
 import React from "react";
-import Sidebar from "../Components/sidebar";
 import Image from "next/image";
-import HeartButton from "../Components/heart";
-import Rentnow from "../Components/rentBTN";
-import Card from "../Components/Card";
+import Card from "@/app/Components/Card";
 import { LocaleRouteNormalizer } from "next/dist/server/future/normalizers/locale-route-normalizer";
-
+import HeartButton from "@/app/Components/Heart";
+import Rentnow from "@/app/Components/RentBtn";
 const Cars = () => {
   return (
     <div className="flex Frame">
@@ -81,7 +79,7 @@ const Cars = () => {
                   Welcome to Our Site!
                 </h1>
                 <p className="text-sm mb-4">
-                  Discover the best cars. 
+                  Discover the best cars.
                 </p>
                 <div className="w-full flex justify-center items-center">
                   <Image
@@ -136,6 +134,7 @@ const Cars = () => {
                     height={24}
                   />
                 </div>
+                {/* <HeartButton /> */}
                 <HeartButton />
               </div>
 
@@ -248,3 +247,4 @@ const Cars = () => {
 };
 
 export default Cars;
+
