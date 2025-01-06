@@ -3,44 +3,44 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className=" Frame relative flex flex-col items-center space-y-6 px-16 w-[1440px]  py-8">
+    <footer className="w-full flex flex-wrap items-center justify-between gap-8 px-4 sm:px-6 py-8 Frame">
+      
       {/* Top Section */}
       <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-8">
         {/* Brand Section */}
-        <div className="brand flex flex-col space-y-3 w-full lg:w-1/3">
-          <h1 className="text-blue-600 text-3xl font-semibold text-center lg:text-left">
+        <div className="brand flex flex-col space-y-4 w-full lg:w-1/3">
+          <h1 className="text-blue-600 text-2xl sm:text-3xl font-semibold text-center lg:text-left">
             MORENT
           </h1>
-          <p className="text-gray-600 text-center lg:text-left max-w-md">
-            Our vision is to provide convenience
-            <br />
-            and help increase your sales business.
+          <p className="text-gray-600 text-sm sm:text-base text-center lg:text-left max-w-md">
+            Our vision is to provide convenience and help increase your sales
+            business.
           </p>
         </div>
 
         {/* Links Section */}
-        <div className="links flex flex-wrap justify-center lg:justify-end gap-8 w-full lg:w-2/3 mb-5">
-          <div className="link-group">
-            <h2 className="font-semibold text-xl">About</h2>
-            <ul className="space-y-4 text-sm mt-4">
+        <div className="links flex flex-col sm:flex-row flex-wrap justify-center lg:justify-end gap-8 w-full lg:w-2/3">
+          <div className="link-group flex flex-col items-center lg:items-start">
+            <h2 className="font-semibold text-lg sm:text-xl">About</h2>
+            <ul className="space-y-2 text-sm mt-2 text-center lg:text-left">
               <li>How it works</li>
               <li>Featured</li>
               <li>Partnership</li>
               <li>Business Relations</li>
             </ul>
           </div>
-          <div className="link-group">
-            <h2 className="font-semibold text-xl">Community</h2>
-            <ul className="space-y-4 text-sm mt-4">
+          <div className="link-group flex flex-col items-center lg:items-start">
+            <h2 className="font-semibold text-lg sm:text-xl">Community</h2>
+            <ul className="space-y-2 text-sm mt-2 text-center lg:text-left">
               <li>Events</li>
               <li>Blog</li>
               <li>Podcast</li>
               <li>Invite Friends</li>
             </ul>
           </div>
-          <div className="link-group">
-            <h2 className="font-semibold text-xl">Socials</h2>
-            <ul className="space-y-4 text-sm mt-4">
+          <div className="link-group flex flex-col items-center lg:items-start">
+            <h2 className="font-semibold text-lg sm:text-xl">Socials</h2>
+            <ul className="space-y-2 text-sm mt-2 text-center lg:text-left">
               <li>
                 <Link href="https://www.discord.com">Discord</Link>
               </li>
@@ -63,14 +63,14 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-4">
-        <div className="text-sm text-center lg:text-left w-full lg:w-auto">
-          <p className="font-bold">&copy; 2022 MORENT. All rights reserved.</p>
-        </div>
-        <div className="policies flex space-x-6 justify-center lg:justify-end w-full lg:w-auto">
-          <p className="font-bold text-sm">Privacy Policy</p>
-          <p className="font-bold text-sm">Terms & Conditions</p>
+        <p className="text-sm sm:text-base text-center lg:text-left w-full lg:w-auto">
+          &copy; 2022 MORENT. All rights reserved.
+        </p>
+        <div className="policies flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 justify-center lg:justify-end w-full lg:w-auto">
+          <p className="font-bold text-sm sm:text-base">Privacy Policy</p>
+          <p className="font-bold text-sm sm:text-base">Terms & Conditions</p>
         </div>
       </div>
     </footer>
-  );
+  );
 }

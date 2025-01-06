@@ -180,7 +180,7 @@ const Form = () => {
             <div className="flex items-center  justify-between ">
               <div className="flex mt-6 ">
                 <Image src="/mark.png" alt="point" width={16} height={16} />
-                <h1 className=" font-semibold">Drop-of</h1>
+                <h1 className=" font-semibold">Credit Card</h1>
               </div>
               <Image src="/Visa.png" alt="point" width={92} height={20} />
             </div>
@@ -397,4 +397,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Form

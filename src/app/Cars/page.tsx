@@ -1,73 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Card from "@/app/Components/Card";
-import { LocaleRouteNormalizer } from "next/dist/server/future/normalizers/locale-route-normalizer";
 import HeartButton from "@/app/Components/Heart";
 import Rentnow from "@/app/Components/RentBtn";
+import Sidebar from "../Components/Sidebar";
 const Cars = () => {
   return (
-    <div className="flex Frame">
+    <div className="flex Frame bg-[f6f7f9]">
       <div>
-        <div className="w-[330px] h-[2016px] bg-bg2 p-6">
-          {/* Type Section */}
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold text-black mb-4">Type</h2>
-            <div className="space-y-2">
-              <label className="flex items-center text-Black">
-                <input type="checkbox" className="mr-2" /> Sport
-              </label>
-              <label className="flex items-center text-">
-                <input type="checkbox" className="mr-2" /> Sedan
-              </label>
-              <label className="flex items-center text">
-                <input type="checkbox" className="mr-2" /> SUV
-              </label>
-              <label className="flex items-center text-">
-                <input type="checkbox" className="mr-2" /> Coupe
-              </label>
-              <label className="flex items-center text-">
-                <input type="checkbox" className="mr-2" /> Hatchback
-              </label>
-            </div>
-          </div>
-
-          {/* Capacities Section */}
-          <div>
-            <h2 className="text-xl font-semibold text- mb-4">Capacities</h2>
-            <div className="space-y-2">
-              <label className="flex items-center text-">
-                <input type="checkbox" className="mr-2" /> 2 person
-              </label>
-              <label className="flex items-center text-">
-                <input type="checkbox" className="mr-2" /> 4 person
-              </label>
-            </div>
-          </div>
-
-          {/* Price Slider Section */}
-          <div className="mt-6">
-            <h2 className="text-xl font-semibold text- mb-4">Price</h2>
-            <div>
-              <input
-                type="range"
-                min="100"
-                max="1000"
-                value="500"
-                className="w-full"
-                disabled
-              />
-              <div className="flex justify-between text- mt-2">
-                <span>$100</span>
-                <span>$1000</span>
-              </div>
-            </div>
-            <div className="mt-2">
-              <h3 className="text-lg text-">Selected Price: $500</h3>
-            </div>
-          </div>
-        </div>
+        <Sidebar />
       </div>
-
       <div>
         <div>
           <div className="flex gap-6 p-6">
@@ -78,9 +20,7 @@ const Cars = () => {
                 <h1 className="text-2xl font-semibold mb-2">
                   Welcome to Our Site!
                 </h1>
-                <p className="text-sm mb-4">
-                  Discover the best cars.
-                </p>
+                <p className="text-sm mb-4">Discover the best cars.</p>
                 <div className="w-full flex justify-center items-center">
                   <Image
                     src="/gtr.png"
@@ -139,31 +79,35 @@ const Cars = () => {
               </div>
 
               {/* Description */}
-              <p className="text-sm text-gray-700 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis veniam quam dolores tenetur soluta veritatis amet nihil sit temporibus, at fuga ad pariatur minima inventore id dolorem nisi ex quas.</p>
+              <p className="text-sm text-gray-700 mb-4">
+                NISMO has become the embodiment of NISSAN's outstanding
+                performance, inspired by the most unforgiving proving ground the
+                "race track".
+              </p>
 
               {/* Specifications */}
               <div className="flex flex-wrap justify-between gap-4 text-sm mb-4">
                 <div className="flex flex-col">
-                  <h1 className="text-base font-medium">Car Type:</h1>
-                  <p className="text-gray-600">Sports</p>
+                  <h1 className="text-base font-medium">Type Car</h1>
+                  <p className="text-gray-600">Sport</p>
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-base font-medium">Capacity:</h1>
-                  <p className="text-gray-600">2 person</p>
+                  <p className="text-gray-600">2 Person</p>
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-base font-medium">Steering:</h1>
-                  <p className="text-gray-600">Automatic</p>
+                  <p className="text-gray-600">Manual</p>
                 </div>
                 <div className="flex flex-col">
                   <h1 className="text-base font-medium">Gasoline:</h1>
-                  <p className="text-gray-600">45L</p>
+                  <p className="text-gray-600">70L</p>
                 </div>
               </div>
 
               {/* Price and Rent Now */}
               <div className="flex justify-between items-center mt-4">
-                <h1 className="text-lg font-semibold">$350/day</h1>
+                <h1 className="text-lg font-semibold">$80/day</h1>
                 <Rentnow />
               </div>
             </div>
@@ -247,4 +191,3 @@ const Cars = () => {
 };
 
 export default Cars;
-

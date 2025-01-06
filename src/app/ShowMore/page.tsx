@@ -1,17 +1,20 @@
-import React from 'react';
-//import Sidebar from '@/app/Components/sidebar';
-import Image from 'next/image';
-import Card from '@/app/Components/Card';
-import Sidebar from '../Components/Sidebar';
+import React from "react";
+import Image from "next/image";
+import Card from "@/app/Components/Card";
+import Sidebar from "../Components/Sidebar";
 
 const ShowMore = () => {
   return (
-    <div className='Frame flex'>
-      <div><Sidebar /></div>
-      <div> {/* Cards and Switch Button */}
-        <div className="flex justify-center items-center space-x-6 mx-auto mt-8">
+    <div className="Frame flex flex-col lg:flex-row">
+      <div>
+        <Sidebar />
+      </div>
+      <div>
+        {" "}
+        {/* Cards and Switch Button */}
+        <div className="flex flex-col lg:flex-row justify-center items-center space-x-6 mx-auto mt-8">
           {/* First Card (Pick-Up) */}
-          <div className="bg-bg1 p-6 rounded-xl shadow-lg space-y-6 w-[400px] h-[132px]">
+          <div className="bg-bg1 p-6 rounded-xl shadow-lg space-y-6 w-full lg:w-[400px] h-[132px] mb-6 lg:mb-0">
             {/* Header Section */}
             <div className="flex items-center space-x-2">
               <Image src="/mark.png" alt="point" width={16} height={16} />
@@ -40,14 +43,14 @@ const ShowMore = () => {
           </div>
 
           {/* Switch Button */}
-          <div className="flex items-center justify-center ">
+          <div className="flex items-center justify-center mb-6 lg:mb-0">
             <button>
               <Image src="/Switch.png" alt="Switch" width={60} height={60} />
             </button>
           </div>
 
           {/* Second Card (Drop-Off) */}
-          <div className="bg-bg1 p-6 rounded-xl shadow-lg space-y-6 w-[400px] h-[132px]">
+          <div className="bg-bg1 p-6 rounded-xl shadow-lg space-y-6 w-full lg:w-[400px] h-[132px]">
             {/* Header Section */}
             <div className="flex items-center space-x-2">
               <Image src="/mark.png" alt="point" width={16} height={16} />
@@ -75,110 +78,98 @@ const ShowMore = () => {
             </div>
           </div>
         </div>
-
         {/* Cards Section */}
-        <div className="grid grid-cols-3 gap-5 mt-8 p-4">
-         
-           <Card
-           
-              title="Nissan GTR"
-              type='Crossover'
-              fuel='40l'
-              transmission='Automatic'
-              image='/gtr.png'
-              seats={5}
-              price='$569.000'
-              description='lorem ipsum dolor'
-            /> 
-            <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-         <Card
-           
-           title="Nissan GTR"
-           type='Crossover'
-           fuel='40l'
-           transmission='Automatic'
-           image='/gtr.png'
-           seats={5}
-           price='$569.000'
-           description='lorem ipsum dolor'
-         /> 
-            
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-8 p-4">
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
+          <Card
+            title="Nissan GTR"
+            type="Crossover"
+            fuel="40l"
+            transmission="Automatic"
+            image="/gtr.png"
+            seats={5}
+            price="$569.000"
+            description="lorem ipsum dolor"
+          />
         </div>
       </div>
     </div>

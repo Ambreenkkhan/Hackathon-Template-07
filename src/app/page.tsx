@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from "next/link"
 import Card from "./Components/Card";
 import Hero from "./Components/Hero";
 
@@ -153,63 +152,62 @@ export default function Home() {
         "The NewMG Z5 is a sleek sedan offering a smooth, comfortable drive. \nPerfect for everyday commuting or long-distance travel. \nWith a stylish exterior and modern interior, it’s a head-turner. \nEnjoy the perfect balance of affordability and sophistication. \nIts advanced safety features ensure you’re protected on every drive. \nThe Z5 offers a comfortable ride with spacious seating for all. \nEfficient fuel economy makes it a cost-effective choice. \nA sedan that combines elegance with practicality.",
     },
   ];
+return (
+  <div className="Frame bg-[#f6f7f9]">
+    {/* Hero Section */}
+    <Hero />
 
-  return (
-    <div className="Frame bg-[#f6f7f9]">
-      {/* Hero Section */}
-      <Hero />
-
-      {/* Popular Cars Section */}
-      <div className="">
-        <div className="flex ml-[80px] w-[250px] justify-start">
-          <h1 className="text-xl text-gray-400 my-4  ">Popular Car</h1>
-        </div>
-        <div className="grid grid-cols-4 ml-[28px] gap-4">
-          {carData.map((car) => (
-            <Card
-              key={car.id}
-              title={car.title}
-              type={car.type}
-              fuel={car.fuel}
-              transmission={car.transmission}
-              image={car.image}
-              seats={car.seats}
-              price={car.price}
-              description={car.description}
-            />
-          ))}
-        </div>
+    {/* Popular Cars Section */}
+    <div className="">
+      <div className="flex ml-4 sm:ml-8 md:ml-[80px] justify-start">
+        <h1 className="text-xl text-gray-400 my-4">Popular Car</h1>
       </div>
-
-      {/* Recommended Cars Section */}
-      <div className="">
-        <div className="flex ml-[80px] w-[250px] justify-start">
-          <h1 className="text-xl text-gray-400  my-4">Recommended Cars</h1>
-        </div>
-        <div className="grid grid-cols-4  ml-[28px] gap-4">
-          {carData1.map((car) => (
-            <Card
-              key={car.id}
-              title={car.title}
-              type={car.type}
-              fuel={car.fuel}
-              transmission={car.transmission}
-              image={car.image}
-              seats={car.seats}
-              price={car.price}
-              description={car.description}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center mt-[30px]">
-        <Link href="/ShowMore">
-          <button className="bg-blue-600 w-[156px] h-[44px] mt-[50px] text-white border rounded-md">
-            Show More Cars
-          </button>
-        </Link>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mx-4 sm:mx-8">
+        {carData.map((car) => (
+          <Card
+            key={car.id}
+            title={car.title}
+            type={car.type}
+            fuel={car.fuel}
+            transmission={car.transmission}
+            image={car.image}
+            seats={car.seats}
+            price={car.price}
+            description={car.description}
+          />
+        ))}
       </div>
     </div>
-  );
+
+    {/* Recommended Cars Section */}
+    <div className="">
+      <div className="flex ml-4 sm:ml-8 md:ml-[80px] justify-start">
+        <h1 className="text-xl text-gray-400 my-4">Recommended Cars</h1>
+      </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mx-4 sm:mx-8">
+        {carData1.map((car) => (
+          <Card
+            key={car.id}
+            title={car.title}
+            type={car.type}
+            fuel={car.fuel}
+            transmission={car.transmission}
+            image={car.image}
+            seats={car.seats}
+            price={car.price}
+            description={car.description}
+          />
+        ))}
+      </div>
+    </div>
+
+    <div className="flex justify-center mt-[30px]">
+      <Link href="/ShowMore">
+        <button className="bg-blue-600 w-[156px] h-[44px] mt-[50px] text-white border rounded-md">
+          Show More Cars
+        </button>
+      </Link>
+    </div>
+  </div>
+);
 }

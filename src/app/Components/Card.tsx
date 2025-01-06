@@ -26,64 +26,53 @@ export default function Card({
   description,
 }: CardProps) {
   return (
-    <div className="bg-[#ffffff] w-[280px] h-[350x] radius-[10px] mr-5 p-4 gap-2 ">
+    <div className="bg-white w-full sm:w-[280px] rounded-lg shadow-md p-4 gap-2 mb-6">
       <Link href={`/Cars`}>
+        {/* Heart Button */}
         <div className="flex justify-end">
           <HeartButton />
         </div>
-        <div className="flex justify-between">
+
+        {/* Title and Type */}
+        <div className="flex justify-between mb-4">
           <div>
-            <h1 className="text-lg font-semibold">{title}</h1>
-            <p className="text-sm">{type}</p>
+            <h1 className="text-base sm:text-lg font-semibold">{title}</h1>
+            <p className="text-sm text-gray-600">{type}</p>
           </div>
         </div>
 
-        {/* Centering the Image */}
-        <div className="flex justify-center items-center mt-[80px]">
+        {/* Image Section */}
+        <div className="flex justify-center items-center my-4">
           <Image
-            src={image} // Path to the image in the 'public' folder
-            alt="Car image" // Alternative text for accessibility
-            width={204} // Width of the image (in pixels)
-            height={64} // Height of the image (in pixels)
-            blurDataURL="/image/blur-placeholder.jpg" // Optional low-quality image for placeholder
-            placeholder="blur" // Enable blur placeholder
+            src={image}
+            alt="Car image"
+            width={204}
+            height={64}
+            className="max-w-full object-contain"
+            blurDataURL="/image/blur-placeholder.jpg"
+            placeholder="blur"
           />
         </div>
 
-        {/* Fuel, Transmission, Capacity - Positioned Horizontally */}
-        <div className="flex gap-4 justify-center text-sm mt-[50px]">
-          <p className="flex items-center mr-4">
-            <Image
-              src="/fuel.png" // Path to the image in the 'public' folder
-              alt="Fuel icon" // Alternative text for accessibility
-              width={24} // Width of the image (in pixels)
-              height={24}
-            />{" "}
+        {/* Specifications */}
+        <div className="flex flex-wrap gap-4 justify-center text-sm mt-4">
+          <p className="flex items-center gap-2">
+            <Image src="/fuel.png" alt="Fuel icon" width={20} height={20} />{" "}
             {fuel}
           </p>
-          <p className="flex items-center">
-            <Image
-              src="/transmission.png" // Path to the image in the 'public' folder
-              alt="Transmission icon" // Alternative text for accessibility
-              width={24} // Width of the image (in pixels)
-              height={24}
-            />{" "}
+          <p className="flex items-center gap-2">
+            <Image src="/transmission.png" alt="Transmission icon" width={20} height={20} />{" "}
             {transmission}
           </p>
-          <p className="flex items-center">
-            <Image
-              src="/Capacity.png" // Path to the image in the 'public' folder
-              alt="Capacity icon" // Alternative text for accessibility
-              width={24} // Width of the image (in pixels)
-              height={24}
-            />{" "}
+          <p className="flex items-center gap-2">
+            <Image src="/Capacity.png" alt="Capacity icon" width={20} height={20} />{" "}
             {seats}
           </p>
         </div>
 
         {/* Price and Rent Now */}
-        <div className="flex justify-between items-center mt-[30px]">
-          <h1 className="text-lg">{price}</h1>
+        <div className="flex justify-between items-center mt-4">
+          <h1 className="text-base sm:text-lg font-semibold">{price}</h1>
           <Rentnow />
         </div>
       </Link>

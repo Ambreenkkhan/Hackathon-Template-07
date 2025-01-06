@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 
 const HeartButton: React.FC = () => {
@@ -11,27 +11,16 @@ const HeartButton: React.FC = () => {
   return (
     <button
       onClick={toggleLike}
-      style={{
-        all: "unset",
-        cursor: "pointer",
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "24px",
-        height: "24px",
-      }}
+      className="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 rounded-full cursor-pointer"
       aria-label={isLiked ? "Unlike" : "Like"}
     >
       <img
         src={isLiked ? "/redheart.png" : "/whiteheart.png"}
         alt={isLiked ? "Red heart" : "White heart"}
-        style={{
-          width: "24px",
-          height: "24px",
-        }}
+        className="w-full h-full object-contain"
       />
     </button>
   );
 };
 
-export default HeartButton;
+export default HeartButton;

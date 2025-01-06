@@ -3,24 +3,26 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="w-[1440px] h-[124px] flex items-center justify-between px-6 Frame ">
-      <div className="flex items-center space-x-8 ml-[60px]">
+    <div className="w-full h-[120px] flex flex-wrap items-center justify-between px-4 sm:px-6 py-4 Frame">
+      {/* Left Section: Logo and Search */}
+      <div className="flex items-center space-x-4 sm:space-x-8 w-full sm:w-auto">
         {/* Logo */}
         <Image src="/Logo.png" alt="logo" width={148} height={44} />
+
         {/* Search Bar */}
-        <div className="flex items-center gap-2 w-[480px] max-w-[492px] h-[44px] border rounded-full px-3 mt-4 md:mt-0 md:flex-1 md:mr-56">
-          <img src="/Search.png" alt="Search" className="w-[20px] h-[20px]" />
+        <div className="flex items-center gap-2 w-full sm:w-auto max-w-[492px] h-[44px] border rounded-full px-3">
+          <img src="/Search.png" alt="Search" className="w-5 h-5" />
           <input
             type="text"
             placeholder="Search something here"
             className="flex-1 bg-transparent border-none outline-none text-sm px-2"
           />
-          <img src="/filter.png" alt="Filter" className="w-[20px] h-[20px]" />
+          <img src="/filter.png" alt="Filter" className="w-5 h-5" />
         </div>
       </div>
 
-      {/* Buttons Section */}
-      <div className="flex items-center space-x-4">
+      {/* Right Section: Buttons */}
+      <div className="flex items-center space-x-2 sm:space-x-4 mt-4 sm:mt-0">
         <button>
           <Image src="/Like.png" width={32} height={32} alt="Heart" />
         </button>
@@ -41,7 +43,7 @@ const Header = () => {
             width={32}
             height={32}
             alt="profile"
-            className="w-[44px] h-44px rounded-full"
+            className="rounded-full"
           />
         </button>
       </div>

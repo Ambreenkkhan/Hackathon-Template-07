@@ -1,14 +1,23 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const Rentnow = () => {
   return (
-    <div>
-      
-       <Link href="/Form" className='w-[116px] h-[44px] border rounded-md'> <Image src="/Button Rental.png" alt="point" width={116} height={44} /></Link>
+    <div className="flex justify-center items-center mt-4">
+      <Link href="/Form">
+        <div className="w-[116px] h-[44px] sm:w-[140px] sm:h-[50px] border rounded-md">
+          <Image
+            src="/Button Rental.png"
+            alt="Rent Now"
+            width={116}
+            height={44}
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Rentnow
+export default Rentnow;
