@@ -80,9 +80,9 @@ const Cars = () => {
 
               {/* Description */}
               <p className="text-sm text-gray-700 mb-4">
-                NISMO has become the embodiment of NISSAN's outstanding
+                NISMO has become the embodiment of NISSAN&apos;s outstanding
                 performance, inspired by the most unforgiving proving ground the
-                "race track".
+                world has ever seen.
               </p>
 
               {/* Specifications */}

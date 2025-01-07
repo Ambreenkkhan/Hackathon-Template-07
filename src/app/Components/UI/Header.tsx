@@ -11,13 +11,13 @@ const Header = () => {
 
         {/* Search Bar */}
         <div className="flex items-center gap-2 w-full sm:w-auto max-w-[492px] h-[44px] border rounded-full px-3">
-          <img src="/Search.png" alt="Search" className="w-5 h-5" />
+          <Image src="/Search.png" alt="Search" width={20} height={20} className="w-5 h-5" />
           <input
             type="text"
             placeholder="Search something here"
             className="flex-1 bg-transparent border-none outline-none text-sm px-2"
           />
-          <img src="/filter.png" alt="Filter" className="w-5 h-5" />
+          <Image src="/filter.png" alt="Filter" width={20} height={20} className="w-5 h-5" />
         </div>
       </div>
 
